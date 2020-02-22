@@ -6,11 +6,16 @@ import Login from "../screens/Auth/Login";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-const Stack = createStackNavigator({
-  AuthHome: AuthHome,
-  SignUp: SignUp,
-  Confirm: Confirm,
-  Login: Login
-});
+const Stack = createStackNavigator(
+  {
+    SignUp: SignUp,
+    Login: Login,
+    Confirm: Confirm,
+    AuthHome: AuthHome
+  },
+  {
+    headerMode: "none"
+  }
+);
 
 export default createAppContainer(Stack);
